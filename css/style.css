@@ -97,11 +97,11 @@ li:hover {
     line-height: 100px;
   }
   .open {
-    height: 200px;
+    height: 225px;
   }
   .open button {
-  height: 40px;
-  padding: 15px 25px;
+  height: 50px;
+  padding: 25px 50px;
   font-size: 20px;
   line-height: 10px;
   border-radius: 10px;
