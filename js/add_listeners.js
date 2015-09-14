@@ -47,3 +47,7 @@ game_unordered_list.addEventListener('mouseleave', function(){
     game_list_item[1].classList.add("closed");
     
 });
+
+ game_list_item[0].addEventListener('touchstart', function(){
+ 	 alert('this is a touch start');
+ });
