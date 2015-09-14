@@ -9,20 +9,20 @@ function add_game(name_value){
 	game_unordered_list.appendChild(new_li);
 	new_li.innerText = name_value; 
 	new_li.classList.toggle("game_list_item");
-};
+}
 
 function get_event_target(event_name) {
     event_name = event_name || window.event;
     return event_name.target || event_name.srcElement; 
-};
+}
 
 function get_index(target){
 	target_parent= target.parentElement;
-	for (i=0;i<target_parent.children.length;i++){
+	for (var i=0;i<target_parent.children.length;i++){
 		if (target_parent.children[i] === target){		
-		};
-	};
-};
+		}
+	}
+}
 
 function make_minus(target){
 	function_loop_mouse_enter();
@@ -34,10 +34,10 @@ function make_minus(target){
 			new_minus.innerText = "-"; 
 			new_minus.classList.toggle("minus");
 			add_minus_listener();
-			};
-		}else{if(target.children.length == 1){target.removeChild(target.children[0])};}
-	};
-};
+			}
+		}else{if(target.children.length == 1){target.removeChild(target.children[0])}}
+	}
+}
 
 var function_minus = function(target) {  
 	if (target.innerText === "-"){ 
@@ -50,7 +50,7 @@ var add_minus_listener = function(){
     for(var i=0;i<class_minus.length;i++){
         class_minus[i].addEventListener('click', function_minus, false);
     }
-}
+};
 
 var function_loop_mouse_enter = function(){
 	for (var i= 0;i<game_list_item.length;i++){
@@ -60,8 +60,8 @@ var function_loop_mouse_enter = function(){
 			   	if (games[i].children.length>0){
 			   		games[i].removeChild(games[i].children[0]);
 				   	
-				};
-   			};
+				}
+   			}
 		});
-	};
+	}
 };
