@@ -45,7 +45,7 @@ function detect_swipe_events(element_to_detect) {
     var swipe_x_difference;
     var swipe_y_difference;
 
-      swipe_event_tyoe = function () {
+      var swipe_event_type = function () {
         swipe_x_difference = Math.abs(swipe_end_x - swipe_start_x);
         swipe_y_difference = Math.abs(swipe_end_y - swipe_start_y);
         var event_type = Math.max(swipe_x_difference, swipe_y_difference) > swipe_move_threshold ?
@@ -72,7 +72,7 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(e, 'swipe_double_tap');
             }
             swipe_active = false;
-            return swipe_event(e, swipe_event_tyoe());
+            return swipe_event(e, swipe_event_type());
           },
           touchcancel: function (e) {
             swipe_active = false;
@@ -111,14 +111,14 @@ function detect_swipe_events(element_to_detect) {
               return swipe_event(e, 'swipe_double_tap');
             }
             swipe_active = false;
-            return swipe_event(e, swipe_event_tyoe());
+            return swipe_event(e, swipe_event_type());
           }
         }
       };
   for (var event_name in f[browser_type]) {
     element_to_detect.addEventListener(event_name, f[browser_type][event_name], false);
   }
-};
+}
 
 function add_mobile_event_listners(element_name) {
     
@@ -154,8 +154,8 @@ function add_mobile_event_listners(element_name) {
     element_to_detect_swipe.addEventListener(
         swipe_event_type[swipe_types],
         swipe_action_to_element,
-        false)
-  };
+        false);
+  }
     
     
   element_to_detect_swipe.addEventListener('touchstart', function (event) {
