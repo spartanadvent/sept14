@@ -119,6 +119,11 @@ p{
   height:15px;
 }
 
+.minus{
+  -webkit-border-radius: none;
+  border-radius: 0;
+}
+
 }
 
 
