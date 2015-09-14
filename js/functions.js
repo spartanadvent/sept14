@@ -29,7 +29,7 @@ function make_minus(target){
 	if (target.parentNode == game_unordered_list){
 		if (target.children.length == 0){
 			if (target != target_parent.children[0]){
-			var new_minus = document.createElement('button');
+			var new_minus = document.createElement('div');
 		  	target.appendChild(new_minus);
 			new_minus.innerText = "-"; 
 			new_minus.classList.toggle("minus");
