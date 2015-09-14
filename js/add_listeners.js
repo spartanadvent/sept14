@@ -27,5 +27,12 @@ document.getElementById("name_input_box").addEventListener('keydown', function k
     };
 });
 
+game_list_item[0].addEventListener('mouseenter', function(){
+		
+		game_list_item[1].classList.toggle("open");
+});
 
-function_loop_mouse_enter();
+game_list_item[0].addEventListener('mouseout', function(){
+
+    	game_list_item[1].classList.toggle("closed");
+});
